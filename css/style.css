@@ -1,0 +1,496 @@
+/** General Rules  */
+:root {
+  --main-color: #0078ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  background-color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*! -------------------------------------------------------- */
+/*^ --------------------Main Title-------------------  */
+.p {
+  padding-top: 3rem;
+}
+
+.title-box {
+  margin-bottom: 4rem;
+}
+
+.title-box h3 {
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.title-box p {
+  color: #4E4E4E;
+}
+
+.title-box .line-mf {
+  width: 40px;
+  height: 5px;
+  background-color: var(--main-color);
+  margin: 0 auto;
+}
+
+/*! -------------------------------------------------------- */
+/*^ --------------------NavBar--------------------  */
+nav {
+  padding-block: 0.625rem;
+}
+
+nav .logo {
+  font-size: 1.7813rem;
+  color: white !important;
+}
+
+.custom-navbar {
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggler-icon.white {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+nav a {
+  position: relative;
+  color: white !important;
+  font-size: 1.10rem;
+  font-weight: 600 !important;
+  padding-inline: 20px;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 10%;
+  transform: translatey(-50%);
+  width: 0;
+  height: 2px;
+  background-color: white;
+  visibility: hidden;
+  transition: width 500ms ease, visibility 500ms ease;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  visibility: visible;
+  width: 80%;
+}
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- Header Section --------------------  */
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/hero-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header-content h1,
+.header-content h3 {
+  color: white;
+}
+
+.header-content h1 {
+  font-size: 4.2rem;
+
+}
+
+.header-content h3 {
+  font-size: 2.2rem;
+}
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- About Section --------------------  */
+.sect-pt4 {
+  padding-top: 4rem;
+}
+
+.box-shadow-full {
+  padding: 3rem 1.25rem;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.title-left {
+  font-size: 2rem;
+  position: relative;
+}
+
+.title-left:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--main-color);
+  width: 100px;
+  bottom: -12px;
+}
+
+.title-box-2 {
+  margin-bottom: 3rem;
+}
+
+.skill-mf .progress {
+  background-color: #cde1f8;
+  margin: 0.5rem 0 1.2rem;
+  border-radius: 0;
+  height: 0.7rem;
+}
+
+#about .cg {
+  color: rgb(78, 78, 78);
+}
+
+#about .b {
+  font-weight: 600;
+}
+
+#about .about-info p {
+  margin-bottom: 15px;
+}
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- Services Section --------------------  */
+.service-box {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.service-box .s-icon {
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.service-box .icon-border {
+  transition: all 500ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-border {
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px var(--main-color);
+  display: block;
+}
+
+.service-box .icon-border i {
+  font-size: 40px;
+}
+
+.service-box:hover .icon-border {
+  border-color: #fff;
+  background-color: #0078ff;
+  color: #fff;
+  box-shadow: 0 0 0 10px #cce6ff;
+}
+
+.service-box .icon-border i {
+  font-size: 40px;
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.service-box:hover .icon-border i {
+  color: #fff;
+}
+
+.service-box .s-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.service-box .s-description {
+  color: #4e4e4e;
+}
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- Counter Section --------------------  */
+.counter {
+  background: linear-gradient(rgba(0, 120, 255, 0.6), rgba(0, 120, 255, 0.6)), url(../images/counters-bg.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 8rem 0;
+  color: #f5f5f5;
+}
+
+.counter-icon {
+  border: 8px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  font-size: 2rem;
+}
+
+.counter-box {
+  text-align: center;
+}
+
+.counter p {
+  font-size: 2.1rem;
+  margin-bottom: 0;
+}
+
+.counter span {
+  text-transform: uppercase;
+  font-size: 1.0625rem;
+}
+
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- Work Section --------------------  */
+.work-box {
+  background-color: #fff;
+  margin-bottom: 3rem;
+
+}
+
+.work-img {
+  display: block;
+  overflow: hidden;
+
+}
+
+.work-img img {
+  transition: transform 0.5s ease;
+  width: 100%;
+
+}
+
+.work-box:hover .work-img img {
+  transform: scale(1.1);
+}
+
+.work-content {
+  padding: 2rem 3% 1rem 4%;
+}
+
+.work-box h2 {
+  font-size: 1.2rem;
+}
+
+.work-box p {
+  font-size: 0.8rem;
+}
+
+.work-box h2,
+.work-box p {
+  margin: 0;
+}
+
+#work svg {
+  text-align: center;
+}
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- testimonials Section --------------------  */
+.testimonials {
+  padding: 8rem 0;
+  background: linear-gradient(rgba(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url(../images/overlay-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  color: white;
+}
+
+.carousel-item {
+  text-align: center; 
+}
+
+.author {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 1rem 0;
+  display: block;
+  font-size: 1.4rem;
+}
+
+.description {
+  margin-bottom: 25px;
+  padding-inline: 10rem; 
+}
+
+.b-shadow-a {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.carousel-indicators .dot {
+  width: 12px;
+  height: 12px; 
+  margin: 0 5px; 
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%; 
+  border: none; 
+  cursor: pointer; 
+  opacity: 0.7; 
+  transition: background-color 0.3s, opacity 0.3s; 
+}
+
+.carousel-indicators .dot.active {
+  background-color: rgba(255, 255, 255, 1); 
+  opacity: 1; 
+}
+
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- Blog Section --------------------  */
+.blog-anchor {
+  color: black;
+  transition: 400ms;
+}
+
+.blog-anchor:hover {
+  color: var(--main-color);
+}
+
+.blog-footer-img {
+  width: 40px;
+  height: 40px;
+}
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- Contact Section --------------------  */
+#contact {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  background: linear-gradient(rgba(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url(../images/overlay-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.75);
+}
+
+.apace {
+  padding: 3rem 2rem;
+}
+
+#contact .title {
+  font-size: 2rem;
+  position: relative;
+  color: black;
+}
+
+.title:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--main-color);
+  width: 100px;
+  bottom: -12px;
+}
+
+#contact .lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.ttn {
+  text-align: center;
+}
+
+.btne {
+  font-size: 1.1875rem;
+  border-radius: 5rem;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.marg {
+  margin-bottom: 2rem;
+}
+
+.more-info {
+  padding-left: 0 !important;
+}
+
+.list-ico {
+  line-height: 2;
+  padding: 0 !important;
+}
+
+.socials ul li {
+  display: inline-block;
+}
+
+.list-ico span {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+.socials {
+  padding: 1.5rem 0 ;
+}
+
+.socials ul li a .ico-circle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--main-color);
+  transition: all 0.3s ease;
+  color: black;
+  margin-right: 0.9375rem;
+}
+.socials ul  {
+  padding: 0 !important;
+}
+
+.socials ul li a:hover .ico-circle {
+  border-color: #fff;
+  background-color: var(--main-color);
+  color: #fff;
+  box-shadow: 0 0 0 4px #cce6ff;
+}
+
+/*! -------------------------------------------------------- */
+/*^ -------------------- Footer Section --------------------  */
+.footer {
+  background-color: #0062d3;;
+  color: white;
+  padding: 25px 0;
+}
+.copyright {
+  margin-bottom: 0.3rem;
+}
