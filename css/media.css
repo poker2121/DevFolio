@@ -1,5 +1,5 @@
 /**----------------Navbar-----------------*/
-@media (max-width: 950px) {
+@media (max-width: 950px), (min-width: 920px) and (max-width: 990px) {
   .navbar-nav .nav-link::before {
     bottom: -4px;
     left: 0;
@@ -11,6 +11,7 @@
     width: 10%;
   }
 }
+
 
 /**----------------Header-----------------*/
 @media (max-width: 768px) {
